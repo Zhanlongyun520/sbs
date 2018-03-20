@@ -1,0 +1,15 @@
+//
+//  ISSNewTaskAnnotationView.h
+//  SmartBuildingSite
+//
+//  Created by WuLeilei on 2017/12/10.
+//  Copyright © 2017年 iSoftStone. All rights reserved.
+//
+
+#import <MAMapKit/MAMapKit.h>
+
+@interface ISSNewTaskAnnotationView : MAAnnotationView
+
+@property (nonatomic, copy) NSString *address;
+
+@end
