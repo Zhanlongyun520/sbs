@@ -4246,7 +4246,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartBuildingSite/SmartBuildingSite.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 继伟 熊 (VR8WZ54B9D)";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DU5P5YBNCW;
@@ -4345,7 +4345,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.smartbuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f4999fa3-57f0-4d9c-a77c-9d63273a4c64";
+				PROVISIONING_PROFILE = "7beaa658-54f5-456b-82cc-ba01d26ae6ae";
 				PROVISIONING_PROFILE_SPECIFIER = SmartBuildingDevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartBuildingSite/SmartBuildingSite-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4361,7 +4361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SmartBuildingSite/SmartBuildingSite.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Wuhan Optical Valley Intelligent Co,LTD (DU5P5YBNCW)";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DU5P5YBNCW;
@@ -4460,8 +4460,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.smartbuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f43dd702-c7a4-457c-928e-6e1e8481aef4";
-				PROVISIONING_PROFILE_SPECIFIER = SmartBuildingDistribution;
+				PROVISIONING_PROFILE = "9a066f01-de6b-4397-be54-29190677ba1d";
+				PROVISIONING_PROFILE_SPECIFIER = "sbs_store描述文件2019";
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartBuildingSite/SmartBuildingSite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
