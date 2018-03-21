@@ -86,7 +86,8 @@
     }
     
     UIView *preView;
-    NSInteger maxCount = 10;
+    //NSInteger maxCount = 10;
+    NSInteger maxCount = 20;
     NSInteger count = _photoArray.count < maxCount ? (_photoArray.count + 1) : maxCount;
     for (NSInteger i = 0; i < count; i ++) {
         UIView *view;

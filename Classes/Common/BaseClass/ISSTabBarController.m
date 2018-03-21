@@ -17,7 +17,7 @@
 #define LABEL_W 60
 #define LABEL_H 20
 
-@interface ISSTabBarController ()
+@interface ISSTabBarController ()<UITabBarControllerDelegate>
 {
     NSArray       *titlesArray;
     NSArray       *normalImageArray;
@@ -31,7 +31,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self.tabBar setHidden:YES];
+        //[self.tabBar setHidden:YES];
     }
     return self;
 }
@@ -44,12 +44,57 @@
     lightImageArray = @[@"home-choice",@"map-choice",@"message-choice",@"system-choice"];
     
     //自定义tabBar
-    [self createCustomTabBarView];
+    //[self createCustomTabBarView];
     //关联viewController
-    [self createViewControllerToTabBarView];
+    //[self createViewControllerToTabBarView];
     
+    // add bj xjw，不采取自定义tabbar
+    self.tabBarController.delegate = self;
+    [self createTabbar];
 }
 
+- (UIImage *)getImage:(NSString *)imageName
+{
+    return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+- (UITabBarItem *)getTabBarItem:(NSInteger)index
+{
+    return [[UITabBarItem alloc] initWithTitle:titlesArray[index]
+                                         image:[self getImage:normalImageArray[index]]
+                                 selectedImage:[self getImage:lightImageArray[index]]];
+}
+
+- (void)createTabbar
+{
+    self.tabBar.tintColor = ISSColorNavigationBar;
+    //首页
+    ISSHomeViewController * homeVC = [[ISSHomeViewController alloc] init];
+    ISSNavigationController * homeNav = [[ISSNavigationController alloc] initWithRootViewController:homeVC];
+    homeNav.tabBarItem = [self getTabBarItem:0];
+    //地图
+    ISSMapViewController * mapVC = [[ISSMapViewController alloc] init];
+    ISSNavigationController * mapNav = [[ISSNavigationController alloc] initWithRootViewController:mapVC];
+    mapNav.tabBarItem = [self getTabBarItem:1];
+    //消息
+    ISSMessageViewController * messageVC = [[ISSMessageViewController alloc] init];
+    ISSNavigationController * messageNav = [[ISSNavigationController alloc] initWithRootViewController:messageVC];
+    messageNav.tabBarItem = [self getTabBarItem:2];
+    //系统
+    ISSSystemViewController * systemVC = [[ISSSystemViewController alloc] init];
+    ISSNavigationController * systemNav = [[ISSNavigationController alloc] initWithRootViewController:systemVC];
+    systemNav.tabBarItem = [self getTabBarItem:3];
+    
+    self.viewControllers = @[homeNav,mapNav,messageNav,systemNav];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    //[ISSGlobalVariable sharedInstance].tabBarIndex = self.selectedIndex;
+    [self postControllerWithIndex:self.selectedIndex];
+}
+
+#pragma mark - 以前的
 //自定义tab
 - (void)createCustomTabBarView
 {

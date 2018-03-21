@@ -140,6 +140,20 @@
     }
     return YES;
 }
+// add by xiongjw 2018.3.16,键盘下去时，颜色恢复
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    if (textField == self.phoneTextField) {
+        userIV.image = [UIImage imageNamed:@"loginuser-gray"];
+        userLine.backgroundColor = ISSColorSeparatorLine;
+    }
+    else
+    {
+        passwordIV.image = [UIImage imageNamed:@"loginpassword-gray"];
+        passwordLine.backgroundColor = ISSColorSeparatorLine;
+    }
+    return YES;
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

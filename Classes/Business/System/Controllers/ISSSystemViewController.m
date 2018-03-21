@@ -128,15 +128,19 @@
 {
     if (indexPath.row == 1) {
         ISSUserInfoViewController * userCenterVC = [[ISSUserInfoViewController alloc]initWithStyle:UITableViewStylePlain];
+        userCenterVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:userCenterVC animated:YES];
     }else if (indexPath.row == 3){
         ISSAboutUsViewController * aboutUsVC = [[ISSAboutUsViewController alloc]init];
+        aboutUsVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:aboutUsVC animated:YES];
     }else if (indexPath.row == 4){
         ISSFreedBackViewController * freedBackVC = [[ISSFreedBackViewController alloc]init];
+        freedBackVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:freedBackVC animated:YES];
     }else if (indexPath.row == 5){
         ISSSettingViewController * settingVC = [[ISSSettingViewController alloc]init];
+        settingVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:settingVC animated:YES];
     }else if (indexPath.row == 7){
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"LoginAccount"];

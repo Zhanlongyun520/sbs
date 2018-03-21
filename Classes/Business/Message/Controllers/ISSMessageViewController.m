@@ -145,31 +145,37 @@
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"视屏监控消息";
         messageListVC.messageType = @"2";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     }else if (indexPath.row == 2){
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"环境监控消息";
         messageListVC.messageType = @"1";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     } else if (indexPath.row == 4) {
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"三方协同消息";
         messageListVC.messageType = @"3";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     } else if (indexPath.row == 6) {
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"渣土车监控消息";
         messageListVC.messageType = @"4";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     } else if (indexPath.row == 8) {
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"巡查任务消息";
         messageListVC.messageType = @"7";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     } else if (indexPath.row == 10) {
         ISSMessageListViewController * messageListVC = [[ISSMessageListViewController alloc]init];
         messageListVC.title = @"巡查计划消息";
         messageListVC.messageType = @"110";
+        messageListVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:messageListVC animated:YES];
     }
 }

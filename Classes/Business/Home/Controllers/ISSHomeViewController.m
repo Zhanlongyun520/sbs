@@ -142,61 +142,71 @@
 
 - (void)topVideoButtonAction
 {
-    ISSVideoListViewController * videoListVC = [[ISSVideoListViewController alloc]init];
-    [self.navigationController pushViewController:videoListVC animated:YES];
+    ISSVideoListViewController * viewController = [[ISSVideoListViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)topMessageButtonAction
 {
     ISSTaskListViewController *viewController = [[ISSTaskListViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)topPendingButtonAction
 {
     ISSThirdViewController *viewController = [[ISSThirdViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)topEnvironmentButtonAction
 {
-    ISSEnvironmentListViewController * videoListVC = [[ISSEnvironmentListViewController alloc]init];
-    [self.navigationController pushViewController:videoListVC animated:YES];
+    ISSEnvironmentListViewController * viewController = [[ISSEnvironmentListViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - Button Action
 
 - (void)videoButtonAction
 {
-    ISSVideoListViewController * videoListVC = [[ISSVideoListViewController alloc]init];
-    [self.navigationController pushViewController:videoListVC animated:YES];
+    ISSVideoListViewController * viewController = [[ISSVideoListViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)environmentButtonAction
 {
-    ISSEnvironmentMonitorViewController * videoChartVC = [[ISSEnvironmentMonitorViewController alloc]init];
-    [self.navigationController pushViewController:videoChartVC animated:YES];
+    ISSEnvironmentMonitorViewController * viewController = [[ISSEnvironmentMonitorViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)thirdartyButtonAction
 {
     ISSThirdViewController * thirdListVC = [[ISSThirdViewController alloc]init];
+    thirdListVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:thirdListVC animated:YES];
 }
 
 - (void)carMonitorButtonAction
 {
-    ISSCarMonitorViewController * thirdListVC = [[ISSCarMonitorViewController alloc]init];
-    [self.navigationController pushViewController:thirdListVC animated:YES];
+    ISSCarMonitorViewController * vc = [[ISSCarMonitorViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)patrolPlainButtonAction
 {
     if ([ISSLoginUserModel shareInstance].privilegeCode.M_CPPA) {
         ISSPlainPendingListViewController *viewController = [[ISSPlainPendingListViewController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     } else if ([ISSLoginUserModel shareInstance].privilegeCode.M_CPP) {
         ISSPlainCreateViewController *viewController = [[ISSPlainCreateViewController alloc] initWithStyle:UITableViewStylePlain];
+        viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
@@ -204,18 +214,21 @@
 - (void)patrolTaskButtonAction
 {
     ISSTaskListViewController *viewController = [[ISSTaskListViewController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)patrolMonitorButtonAction
 {
     ISSPatrolMonitorViewController *viewController = [[ISSPatrolMonitorViewController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)patrolStatButtonAction
 {
     ISSPatrolStatViewController *viewController = [[ISSPatrolStatViewController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

@@ -311,6 +311,7 @@
         case 1: {
             ISSRealTimeViewController * realTimeVC = [[ISSRealTimeViewController alloc]init];
             realTimeVC.listModel = model;
+            realTimeVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:realTimeVC animated:YES];
             
             break;
@@ -319,6 +320,7 @@
         case 2: {
             ISSHistoryViewController * historyVC = [[ISSHistoryViewController alloc]init];
             historyVC.listModel = model;
+            historyVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:historyVC animated:YES];
             
             break;
@@ -333,6 +335,7 @@
             
             ISSVideoPhotoViewController *viewController = [[ISSVideoPhotoViewController alloc] init];
             viewController.code = model.deviceCoding;
+            viewController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:viewController animated:YES];
             
             break;
@@ -411,6 +414,7 @@
         case 1: {
             ISSEnvironmentRealTimeViewController * realTimeVC = [[ISSEnvironmentRealTimeViewController alloc]init];
             realTimeVC.environmentListModel = (ISSEnvironmentListModel *)model;
+            realTimeVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:realTimeVC animated:YES];
             
             break;
@@ -419,6 +423,7 @@
         case 2: {
             ISSEnvironmentHistoryViewController * historyVC = [[ISSEnvironmentHistoryViewController alloc]init];
             historyVC.environmentListModel = (ISSEnvironmentListModel *)model;
+            historyVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:historyVC animated:YES];
             
             break;
