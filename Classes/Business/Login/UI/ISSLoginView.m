@@ -71,7 +71,7 @@
     
 //    bottomLine = [[UIView alloc] initWithFrame:CGRectMake(0, _verifyTextField.bottom, kScreenWidth, 0.5)];
 //    bottomLine.backgroundColor = ISSColorSeparatorLine;
-//    [self addSubview:bottomLine];
+//    [self addSubview:bottomLine]; 
 //
     [self addSubview:self.loginBtn];
     
