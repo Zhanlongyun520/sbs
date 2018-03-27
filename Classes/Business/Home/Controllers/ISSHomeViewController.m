@@ -140,13 +140,6 @@
 
 #pragma mark - Button Action
 
-- (void)topVideoButtonAction
-{
-    ISSVideoListViewController * viewController = [[ISSVideoListViewController alloc]init];
-    viewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:viewController animated:YES];
-}
-
 - (void)topMessageButtonAction
 {
     ISSTaskListViewController *viewController = [[ISSTaskListViewController alloc]init];
@@ -161,6 +154,13 @@
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
+- (void)topVideoButtonAction
+{
+    ISSVideoListViewController * viewController = [[ISSVideoListViewController alloc]init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 - (void)topEnvironmentButtonAction
 {
     ISSEnvironmentListViewController * viewController = [[ISSEnvironmentListViewController alloc]init];
@@ -169,35 +169,35 @@
 }
 
 #pragma mark - Button Action
-
+//视频监控
 - (void)videoButtonAction
 {
     ISSVideoListViewController * viewController = [[ISSVideoListViewController alloc]init];
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
+//环境监测
 - (void)environmentButtonAction
 {
     ISSEnvironmentMonitorViewController * viewController = [[ISSEnvironmentMonitorViewController alloc]init];
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
+//三方协同
 - (void)thirdartyButtonAction
 {
     ISSThirdViewController * thirdListVC = [[ISSThirdViewController alloc]init];
     thirdListVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:thirdListVC animated:YES];
 }
-
+//渣土车监控
 - (void)carMonitorButtonAction
 {
     ISSCarMonitorViewController * vc = [[ISSCarMonitorViewController alloc]init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+//巡查计划
 - (void)patrolPlainButtonAction
 {
     if ([ISSLoginUserModel shareInstance].privilegeCode.M_CPPA) {
@@ -210,21 +210,21 @@
         [self.navigationController pushViewController:viewController animated:YES];
     }
 }
-
+//巡查任务
 - (void)patrolTaskButtonAction
 {
     ISSTaskListViewController *viewController = [[ISSTaskListViewController alloc] init];
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
+//巡查监控
 - (void)patrolMonitorButtonAction
 {
     ISSPatrolMonitorViewController *viewController = [[ISSPatrolMonitorViewController alloc] init];
     viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
+//巡查概况
 - (void)patrolStatButtonAction
 {
     ISSPatrolStatViewController *viewController = [[ISSPatrolStatViewController alloc] init];
@@ -280,7 +280,8 @@
 -(UITableView *)mainTableView
 {
     if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.homeFunctionView.frame), kScreenWidth, kScreenHeight - CGRectGetHeight(self.homeFunctionView.frame) - kTabbarHeight) style:UITableViewStylePlain];
+        //_mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.homeFunctionView.frame), kScreenWidth, kScreenHeight - CGRectGetHeight(self.homeFunctionView.frame) - kTabbarHeight) style:UITableViewStylePlain];
+        _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.homeFunctionView.frame), kScreenWidth, kScreenHeight - CGRectGetMaxY(self.homeFunctionView.frame) - kTabbarHeight) style:UITableViewStylePlain];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.backgroundColor = ISSColorViewBg;

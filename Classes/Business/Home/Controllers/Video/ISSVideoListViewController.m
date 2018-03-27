@@ -70,6 +70,7 @@
     
     ISSMapViewController *viewController = [[ISSMapViewController alloc]init];
     viewController.selectedDeviceId = model.deviceId;
+    viewController.showType = 1;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

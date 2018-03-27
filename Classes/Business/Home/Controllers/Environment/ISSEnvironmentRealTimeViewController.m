@@ -144,6 +144,7 @@
     if (indexPath.section == 0 && indexPath.row == 0) {
         ISSMapViewController *vc = [[ISSMapViewController alloc] init];
         vc.selectedDeviceId = self.environmentListModel.deviceId;
+        vc.showType = 2;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

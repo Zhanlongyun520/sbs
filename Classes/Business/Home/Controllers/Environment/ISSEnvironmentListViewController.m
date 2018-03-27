@@ -94,6 +94,7 @@
     ISSEnvironmentListModel * environmentListModel = self.environmentListArray[button.tag - 123000];
     ISSMapViewController *vc = [[ISSMapViewController alloc] init];
     vc.selectedDeviceId = environmentListModel.deviceId;
+    vc.showType = 2;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -101,7 +101,33 @@
         pointAnnotation.subtitle = [NSString stringWithFormat:@"%d",i];
         pointAnnotation.model = model;
 //        _mapView.centerCoordinate = coor;
-        [_positionAnnotaionList addObject:pointAnnotation];
+        if (self.showType == 1) {
+            if ([model.deviceType integerValue] == 1) {
+                if (self.showSinger) {
+                    if ([self.selectedDeviceId isEqualToString:model.deviceId]) {
+                        [_positionAnnotaionList addObject:pointAnnotation];
+                    }
+                }
+                else {
+                    [_positionAnnotaionList addObject:pointAnnotation];
+                }
+            }
+        }
+        else if (self.showType == 2) {
+            if ([model.deviceType integerValue] != 1) {
+                if (self.showSinger) {
+                    if ([self.selectedDeviceId isEqualToString:model.deviceId]) {
+                        [_positionAnnotaionList addObject:pointAnnotation];
+                    }
+                }
+                else {
+                    [_positionAnnotaionList addObject:pointAnnotation];
+                }
+            }
+        }
+        else {
+            [_positionAnnotaionList addObject:pointAnnotation];
+        }
         
         dispatch_after(0.01, dispatch_get_main_queue(), ^{
             if (self.selectedDeviceId && self.selectedDeviceId.length > 0) {

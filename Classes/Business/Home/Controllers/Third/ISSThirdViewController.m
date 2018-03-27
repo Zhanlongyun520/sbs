@@ -35,10 +35,13 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     
     NSMutableArray *titlesArray = @[].mutableCopy;
-    if ([ISSLoginUserModel shareInstance].privilegeCode.M_PATROL_REPORT) {
+    
+    BOOL patrolReport = [ISSLoginUserModel shareInstance].privilegeCode.M_PATROL_REPORT;
+    BOOL reportAccept = [ISSLoginUserModel shareInstance].privilegeCode.M_PATROL_ACCEPT;
+    if (patrolReport) {
         [titlesArray addObject:@"巡查报告"];
     }
-    if ([ISSLoginUserModel shareInstance].privilegeCode.M_PATROL_ACCEPT) {
+    if (reportAccept) {
         [titlesArray addObject:@"报告验收"];
     }
     if (titlesArray.count == 0) {
@@ -79,6 +82,7 @@
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_scrollView);
         make.height.equalTo(_scrollView);
+        
     }];
     
     ISSPatrolReportViewController *patrolReportViewController;
@@ -87,8 +91,17 @@
         patrolReportViewController.limitDep = YES;
         [contentView addSubview:patrolReportViewController.view];
         [patrolReportViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.bottom.equalTo(@0);
-            make.width.equalTo(_scrollView);
+            
+            if (patrolReport && reportAccept) {
+                make.left.top.bottom.equalTo(@0);
+                make.width.equalTo(_scrollView);
+            }
+            else
+            {
+                make.bottom.top.right.equalTo(@0);
+                make.width.equalTo(_scrollView);
+                make.left.equalTo(@0);
+            }
         }];
         [self addChildViewController:patrolReportViewController];
     }
