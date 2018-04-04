@@ -10,7 +10,8 @@
 #import "ISSMessageListTableViewCell.h"
 #import "ISSMessageModel.h"
 #import "Masonry.h"
-
+#import "ISSMapViewController.h"
+#import "ISSVideoModel.h"
 @interface ISSMessageListViewController ()
 {
     NSInteger _currentPage;
@@ -53,12 +54,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ISSMessageModel *model = [_dataArray objectAtIndex:indexPath.row];
-    
+
     NetworkRequest *request = [[NetworkRequest alloc] init];
     [request completion:^(NSDictionary *result, BOOL success, BOOL networkError) {
+
         
+    
     }];
-    [request setMessageRead:model.infoId];
+     [request setMessageRead:model.infoId];
 }
 
 - (void)refreshData {

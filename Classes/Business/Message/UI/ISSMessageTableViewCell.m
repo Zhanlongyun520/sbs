@@ -8,7 +8,7 @@
 //
 
 #import "ISSMessageTableViewCell.h"
-
+#import "Masonry.h"
 @interface ISSMessageTableViewCell()
 {
     UILabel         * detailLabel;
@@ -38,14 +38,12 @@
         badgeLabel.text = @"7";
         badgeLabel.textAlignment = NSTextAlignmentCenter;
         badgeLabel.backgroundColor = [UIColor redColor];
-        badgeLabel.layer.cornerRadius = 15/2;
+        badgeLabel.adjustsFontSizeToFitWidth = YES;
         badgeLabel.layer.masksToBounds = YES;
         badgeLabel.hidden = YES;
         [self.contentView addSubview:badgeLabel];
-        [self.contentView addConstraints:[badgeLabel constraintsSize:CGSizeMake(15, 15)]];
-        [self.contentView addConstraints:[badgeLabel constraintsTop:-47 FromView:_logoIV]];
-        [self.contentView addConstraints:[badgeLabel constraintsLeft:-7 FromView:_logoIV]];
-        
+        badgeLabel.layer.cornerRadius = 15/2;
+
         self.nameLabel = [[UILabel alloc]initForAutoLayout];
         _nameLabel.font = ISSFont14;
         _nameLabel.textColor = ISSColorDardGray2;
@@ -97,15 +95,21 @@
 {
     if (count > 0) {
         label.hidden = NO;
-        if (count < 10) {
-            label.size = CGSizeMake(15, 15);
-        }else{
-            label.size = CGSizeMake(22, 15);
+        if (count < 100) {
+            [self.contentView addConstraints:[label constraintsSize:CGSizeMake(15, 15)]];
+            [self.contentView addConstraints:[badgeLabel constraintsLeft:-7 FromView:_logoIV]];
         }
+        else{
+           [self.contentView addConstraints:[label constraintsSize:CGSizeMake(30, 15)]];
+        [self.contentView addConstraints:[badgeLabel constraintsLeft:-15 FromView:_logoIV]];
+        }
+        
         label.text = [NSString stringWithFormat:@"%ld",(long)count];
     }else{
         label.hidden = YES;
     }
+    
+   [self.contentView addConstraints:[badgeLabel constraintsTop:-47 FromView:_logoIV]];
 }
 
 @end

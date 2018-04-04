@@ -377,7 +377,6 @@
 		6DD20DAA1FD8411300252407 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD20DA91FD8411200252407 /* NSString+Size.m */; };
 		6DDE07751FDECA7600B6BD72 /* ISSTaskDetailPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE07741FDECA7600B6BD72 /* ISSTaskDetailPopupView.m */; };
 		6DDE07791FDEE1D900B6BD72 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDE07781FDEE1D900B6BD72 /* UIView+Toast.m */; };
-		6DE228981FEC07490029347B /* libAirIMOSIphoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE228971FEC07490029347B /* libAirIMOSIphoneSDK.a */; };
 		6DE2289A1FEC07850029347B /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE228991FEC07850029347B /* libbz2.tbd */; };
 		6DE2289C1FEC078B0029347B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE2289B1FEC078B0029347B /* libz.tbd */; };
 		6DE2289E1FEC07930029347B /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE2289D1FEC07930029347B /* libiconv.tbd */; };
@@ -446,6 +445,7 @@
 		6DF2DB421FD921BE00F261F0 /* ISSPlainWeekListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2DB411FD921BE00F261F0 /* ISSPlainWeekListCell.m */; };
 		6DF2DB461FD940C600F261F0 /* APIPlainTaskListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2DB451FD940C600F261F0 /* APIPlainTaskListManager.m */; };
 		6DF2DB491FD9445000F261F0 /* APIPlainMonthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2DB481FD9445000F261F0 /* APIPlainMonthManager.m */; };
+		D67040A520689513003659FD /* libAirIMOSIphoneSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67040A420689512003659FD /* libAirIMOSIphoneSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1266,7 +1266,6 @@
 		6DE228941FEC07490029347B /* UVStreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVStreamInfo.h; sourceTree = "<group>"; };
 		6DE228951FEC07490029347B /* UVStreamPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVStreamPlayer.h; sourceTree = "<group>"; };
 		6DE228961FEC07490029347B /* UVUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVUtils.h; sourceTree = "<group>"; };
-		6DE228971FEC07490029347B /* libAirIMOSIphoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAirIMOSIphoneSDK.a; sourceTree = "<group>"; };
 		6DE228991FEC07850029347B /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		6DE2289B1FEC078B0029347B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6DE2289D1FEC07930029347B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -1398,6 +1397,7 @@
 		6DF2DB471FD9445000F261F0 /* APIPlainMonthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIPlainMonthManager.h; sourceTree = "<group>"; };
 		6DF2DB481FD9445000F261F0 /* APIPlainMonthManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIPlainMonthManager.m; sourceTree = "<group>"; };
 		9167D4429F6BB636D22219FB /* Pods-SmartBuildingSite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuildingSite.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartBuildingSite/Pods-SmartBuildingSite.release.xcconfig"; sourceTree = "<group>"; };
+		D67040A420689512003659FD /* libAirIMOSIphoneSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAirIMOSIphoneSDK.a; sourceTree = "<group>"; };
 		F19AB1038C40D96FAAED1040 /* Pods_SmartBuildingSite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuildingSite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1413,8 +1413,8 @@
 				6DE228A21FEC07BE0029347B /* AVFoundation.framework in Frameworks */,
 				6DE228A01FEC07B10029347B /* AudioToolbox.framework in Frameworks */,
 				6DE2289A1FEC07850029347B /* libbz2.tbd in Frameworks */,
+				D67040A520689513003659FD /* libAirIMOSIphoneSDK.a in Frameworks */,
 				6DE2289C1FEC078B0029347B /* libz.tbd in Frameworks */,
-				6DE228981FEC07490029347B /* libAirIMOSIphoneSDK.a in Frameworks */,
 				40C0AFA8892ADFB501E00EAB /* Pods_SmartBuildingSite.framework in Frameworks */,
 				6DE2289E1FEC07930029347B /* libiconv.tbd in Frameworks */,
 			);
@@ -3135,7 +3135,7 @@
 			isa = PBXGroup;
 			children = (
 				6DE2287A1FEC07490029347B /* include */,
-				6DE228971FEC07490029347B /* libAirIMOSIphoneSDK.a */,
+				D67040A420689512003659FD /* libAirIMOSIphoneSDK.a */,
 			);
 			path = AirIMOSIphoneSDK;
 			sourceTree = "<group>";
